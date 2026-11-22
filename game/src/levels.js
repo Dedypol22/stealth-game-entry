@@ -1,0 +1,103 @@
+export const LEVELS = [
+    {
+        name: 'Galeri Senja',
+        map: [
+            'WWWWWWWWWWWWWWWWWWWW',
+            'W......A...........W',
+            'W..CC.......CC.....W',
+            'W..CC.......CC.....W',
+            'W......G...........W',
+            'W..................W',
+            'W..CC.......CC..A..W',
+            'W..CC.......CC.....W',
+            'W......G...........W',
+            'W..................W',
+            'W..CC.......CC.....W',
+            'W..CC...G...CC..A..W',
+            'W..................W',
+            'WWWWWWWWWWWWWWWWWWWW',
+        ],
+        guards: [
+            { path: [[300, 200], [900, 200]], type: 'guard' },
+            { path: [[900, 500], [300, 500]], type: 'guard' },
+            { path: [[600, 300], [600, 700]], type: 'guard' },
+        ],
+        artifacts: [[400, 100], [1100, 400], [1100, 700]],
+        exit: [1200, 100],
+        playerStart: [100, 700],
+        timeLimit: 240,
+        pebbles: 3
+    },
+    {
+        name: 'Gudang Arsip',
+        map: [
+            'WWWWWWWWWWWWWWWWWWWW',
+            'W.A.S.S.S.S.S.S.S.AW',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S.AW',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.S.S.S.S.S.S.S.S..W',
+            'W.A.S.S.S.S.S.S.S..W',
+            'W..................W',
+            'WWWWWWWWWWWWWWWWWWWW',
+        ],
+        guards: [
+            { path: [[100, 100], [1100, 100]], type: 'guard' },
+            { path: [[100, 300], [1100, 300]], type: 'guard' },
+            { path: [[1100, 500], [100, 500]], type: 'guard' },
+            { path: [[1100, 700], [100, 700]], type: 'guard' },
+        ],
+        cameras: [
+            { pos: [640, 80], angle: 90, arc: 90, speed: 0.01 },
+            { pos: [96, 400], angle: 0, arc: 90, speed: 0.015 },
+        ],
+        artifacts: [[100, 100], [1100, 100], [1100, 500], [100, 700]],
+        exit: [1200, 400],
+        playerStart: [100, 400],
+        timeLimit: 240,
+        pebbles: 3
+    },
+    {
+        name: 'Ruang Harta',
+        map: [
+            'WWWWWWWWWWWWWWWWWWWW',
+            'W...L...L...L...L..W',
+            'WA..L...L...L...L.AW',
+            'W...L...L...L...L..W',
+            'W...L...L...L...L..W',
+            'W...L...L...L...L..W',
+            'WA..L...L...L...L.AW',
+            'W...L...L...L...L..W',
+            'W...L...L...L...L..W',
+            'W...L...L...L...L..W',
+            'WA..L...L...L...L..W',
+            'W...L...L...L...L..W',
+            'W..................W',
+            'WWWWWWWWWWWWWWWWWWWW',
+        ],
+        guards: [
+            { path: [[160, 100], [160, 700]], type: 'guard' },
+            { path: [[416, 700], [416, 100]], type: 'guard' },
+            { path: [[672, 100], [672, 700]], type: 'guard' },
+            { path: [[928, 700], [928, 100]], type: 'guard' },
+            { path: [[1184, 100], [1184, 700]], type: 'guard' },
+        ],
+        cameras: [
+            { pos: [96, 96], angle: 45, arc: 60, speed: 0.02 },
+            { pos: [1184, 96], angle: 135, arc: 60, speed: 0.02 },
+            { pos: [640, 736], angle: 270, arc: 120, speed: 0.01 },
+        ],
+        artifacts: [[100, 150], [1100, 150], [100, 400], [1100, 400], [100, 650]],
+        exit: [1200, 700],
+        playerStart: [100, 50],
+        timeLimit: 300,
+        pebbles: 3
+    }
+];
+// Legend: W=Wall, C=Cover, S=Shadow, L=Light pool (pillar in middle usually), A=Artifact (will be placed manually), G=Guard (will be placed manually)
+// We'll interpret the map strings in world.js to build the static geometry.
